@@ -12,6 +12,8 @@ sdk_path_prefix_command = Mixlib::ShellOut.new('brew --prefix android-sdk')
 sdk_path_prefix_command.run_command
 sdk_path_prefix = sdk_path_prefix_command.stdout.strip
 
+include_recipe 'sprout-base::var_chef_cache'
+
 link "#{Chef::Config[:file_cache_path]}/#{haxm_pkg}.dmg" do
   to "#{sdk_path_prefix}/#{haxm_dmg_path}" # Symlink to cache dir so dmg_package can load the file
 end
