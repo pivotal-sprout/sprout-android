@@ -30,8 +30,6 @@ bundle exec soloist
 | `sprout.android.haxm.package_id`              | used to see if package is installed already       |
 | `sprout.android.haxm.checksum`                | sha 256 checksum of the file, used to check cache |
 
-* `path` &mdash; The path to the file that android touches; default is `~/android`
-
 ### Recipes
 
 1. `sprout-android`
