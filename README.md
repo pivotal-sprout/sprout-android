@@ -22,7 +22,13 @@ bundle exec soloist
 
 ### Attributes
 
-*NOTE:* All preferences are namespaced under `sprout => android` they include:
+| Attribute                                     | Description                                       |
+|-----------------------------------------------|---------------------------------------------------|
+| `sprout.android.atom_system_image_package_id` | package ID for the Intel Atom system image        |
+| `sprout.android.haxm.dmg_path`                | path to dmg inside homebrew install               |
+| `sprout.android.haxm.package_name`            | name of the dmg when mounted                      |
+| `sprout.android.haxm.package_id`              | used to see if package is installed already       |
+| `sprout.android.haxm.checksum`                | sha 256 checksum of the file, used to check cache |
 
 * `path` &mdash; The path to the file that android touches; default is `~/android`
 
