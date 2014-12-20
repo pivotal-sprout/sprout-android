@@ -17,5 +17,5 @@ atom_system_image_package_id = node['sprout']['android']['atom_system_image_pack
 
 execute 'update-sdk-system-images' do
   command "echo y | android update sdk -a --no-ui --filter #{atom_system_image_package_id}"
-  user node['current_user']
+  user node['sprout']['user']
 end
