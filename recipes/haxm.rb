@@ -1,4 +1,5 @@
 include_recipe 'sprout-android::sdk'
+include_recipe 'homebrew'
 
 haxm_pkg      = node['sprout']['android']['haxm']['package_name']
 haxm_dmg_path = node['sprout']['android']['haxm']['dmg_path']
