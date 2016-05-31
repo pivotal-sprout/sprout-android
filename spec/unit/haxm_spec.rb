@@ -1,7 +1,7 @@
 require 'unit/spec_helper'
 
 describe 'sprout-android::haxm' do
-  let(:runner) { ChefSpec::Runner.new }
+  let(:runner) { ChefSpec::SoloRunner.new }
 
   it 'depends on the sdk recipe' do
     runner.converge(described_recipe)

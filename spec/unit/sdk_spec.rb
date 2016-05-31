@@ -1,7 +1,7 @@
 require 'unit/spec_helper'
 
 describe 'sprout-android::sdk' do
-  let(:runner) { ChefSpec::Runner.new }
+  let(:runner) { ChefSpec::SoloRunner.new }
 
   it 'installs the android-sdk package' do
     runner.converge(described_recipe)
