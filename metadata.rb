@@ -9,3 +9,6 @@ supports         'mac_os_x'
 depends          'dmg'
 depends          'homebrew'
 depends          'sprout-base'
+
+issues_url 'https://github.com/pivotal-sprout/sprout-android/issues'
+source_url 'https://github.com/pivotal-sprout/sprout-android'
