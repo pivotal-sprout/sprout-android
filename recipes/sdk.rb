@@ -1,3 +1,5 @@
+include_recipe 'homebrew'
+
 package 'android-sdk'
 
 filters = %w(
