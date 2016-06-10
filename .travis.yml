@@ -1,7 +1,16 @@
 language: objective-c
+osx_image: xcode7.3
 rvm: system
 install:
-  - sudo gem install bundler --no-ri --no-rdoc
-  - sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle install
+  - rm -rf /usr/local/var/postgres # Travis comes with Postgres 9.4 data, so we much clear it out
+
+  # We are testing installation of homebrew, so should uninstall everything
+  - brew cask list
+  - brew cask zap $(brew cask list)
+  - brew list
+  - brew uninstall --force $(brew list)
+  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+
+  - rvm implode --force # We are testing installation of Rubies, so should uninstall everything
 script:
-  - bundle exec rake ci
+  - ./sprout exec rake ci
